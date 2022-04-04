@@ -1,20 +1,40 @@
 <template>
 <div id="app">
   <div class="header">
-    <router-link to="/">
+    <div id="brand">
+      <router-link to="/">
+        <img src="/images/fakelogo.png"><br><br><br>
+      </router-link>
+    </div>
+    <div id="side">
+      <router-link to="/browse">
+        <div class="menu-item browse">
+          <img src="/images/globe.png">
+          <p>Browse</p>
+        </div>
+      </router-link>
+      <router-link to="/cart">
+        <div class="menu-item">
+          <img src="/images/love.png">
+          <p>{{this.$root.$data.cart.length}} items</p>
+        </div>
+      </router-link>
+    </div>
+    <!-- <router-link to="/">
       <div class="logo">
         <img src="/ordinary.png">
       </div>
     </router-link>
     <div class="title">
-      <h1>Museum of Ordinary Objects</h1>
-    </div>
+      <h1>Add Title Here</h1> -->
+    <!-- </div> -->
   </div>
   <div class="content">
     <router-view />
   </div>
   <div class="footer">
     <router-link to="/admin">Admin</router-link>
+    <router-link to="/home">Home</router-link>
   </div>
 </div>
 </template>
